@@ -1,3 +1,5 @@
+Fundamentos
+
  //1- Crie um programa que solicite a letra inicial do nome do usuário com scanf 
 //e depois exiba uma mensagem de boas-vindas com printf, utilizando essa 
 //letra.
@@ -8,4 +10,677 @@ int main(){
 	scanf("%c",&nome);
 	printf("Seja ben vindo %c", nome);
 return 0;
+}
+
+//2- Solicite a primeira letra do nome e a primeira letra do sobrenome de um 
+//aluno, além da matrícula (número inteiro). Exiba os dados com uma frase 
+//como: “Aluno [N.S], matrícula [número]”
+
+#include <stdio.h>
+int main(){
+	char aluno_nome;
+	int matricola_aluno = 0;
+	
+	printf("Qual é o nome do aluno?: ");
+	scanf("%c", & aluno_nome);
+	printf("Qual é a matricola desse aluno? ");
+	scanf("%d", &matricola_aluno);
+	
+	printf("Nome: %c \n", aluno_nome);
+	printf("Matricula: %d", matricola_aluno);
+	
+return 0;
+	
+}
+
+//3-/Peça ao usuário que informe a letra inicial da rua, bairro, cidade, estado e 
+//os dígitos do CEP separadamente. Exiba o endereço formatado com 
+//printf.
+
+#include <stdio.h>
+int main (){
+	char rua = 0, bairro = 0, cidade = 0, uf = 0;
+	int cep;
+	printf("Qual rua você mora?: \n ");
+	scanf("%c", &rua);
+	printf("E que bairro?: \n");
+	scanf("%c",&bairro);
+	printf("Cidade: \n");
+	scanf("%c",& cidade);
+	printf("Que estado?: \n");
+	scanf("%c",&uf);
+	printf("Qual cep?: ");
+	scanf("%d",&cep);
+	
+	printf("Você mora na rua, %c", rua);
+	printf("no bairro, %c", bairro); 
+	printf("na cidade %c", cidade);
+	printf("estado %c \n",uf );
+	printf("Cep: %d ?", cep);
+	
+	return 0;
+}
+ 
+//4- Leia a letra inicial do título, do autor e o ano de publicação. Exiba os 
+//dados organizados em três linhas, como: Título: [letra] Autor: [letra] Ano: 
+//[número]
+
+#include <stdio.h>
+int main (){
+	char titulo;
+	char autor;
+	
+	printf("Qual titulo você busca? \n");
+	scanf(" %c", &titulo);
+	printf("ta de qual autor? \n");
+	scanf(" %c", &autor);
+	printf("Aqui esta o livro  %c \n", titulo );
+	printf("do autor %c \n", autor);
+
+	return 0;	
+}
+
+//5- Solicite a primeira letra do nome e a primeira letra do sobrenome de um
+//aluno, além da matrícula (número inteiro). Exiba os dados com uma frase
+//como: “Aluno [N.S], matrícula [número]”.
+ #include <stdio.h>
+int main() {
+char l, a;
+int mat;
+
+printf("Qual a primeira letra do seu nome?:" );
+scanf(" %c",&l);
+printf("Qual a primeira letra do seu sobrenome?:" );
+scanf(" %c",&a);
+printf("Qual a matrícula?:"  );
+scanf("%d",&mat);
+
+printf("Aluno: %c %c, mat: %d", l, a, mat);
+
+return 0;
+}
+
+
+
+//6- Peça ao usuário que informe a letra inicial da marca, 
+//do modelo e o ano do carro. Exiba os dados
+ //em uma única linha como: “Veículo [marca]-[modelo]-[ano]”.
+
+#include <stdio.h>
+int main(){
+	char modelo, marca;
+	int ano;
+	
+	printf("Qual é o Marca?: ");
+	scanf("%c", &marca);
+	printf("Qual é o modelo?: ");
+	scanf(" %c", &modelo);
+	printf("Qual ano de  veiculo?: ");
+	scanf(" %d", &ano);
+	
+	printf(" \n Marca: %c, Modelo: %c, Ano  do Veiculo: %d", marca, modelo, ano);
+	
+return 0;	
+}
+
+//Questão 07 – Mensagem personalizada
+//Leia a letra inicial do nome de uma 
+//pessoa e uma mensagem curta (como um 
+//número ou símbolo). Exiba: 
+//“Mensagem para [letra]: [mensagem]”.
+
+#include <stdio.h>
+int main()
+{
+char l, ni;
+
+printf("Inssira a letra: \n ");	
+scanf(" %c", &l);
+printf("Inssira uma mensagem aletoria: \n ");
+scanf(" %c", &ni);
+printf("\n letra : %c, Mensagem aleatoria: %c ", l, ni);
+
+	return 0;
+}
+
+
+
+//Questão 08 – Formatação de //valores
+//Leia um número decimal e exiba //com duas casas decimais //usando printf.
+
+#include <stdio.h>
+int main () {
+	
+ float n1;
+ 
+ printf("Numero: \n");
+ scanf("%f", &n1);
+ 
+ printf("O numero decimal: %.2f \n", n1);
+ 
+ return 0;
+}
+
+//Questão 09 – Nome completo caractere por caractere
+//Durante o cadastro inicial, o sistema ainda não permite a entrada de 
+//nomes completos via string. Por isso, o nome deve ser capturado letra 
+//por letra. Crie um programa que solicite ao usuário a primeira letra 
+//do nome, a segunda letra do nome, a primeira letra do sobrenome e a 
+//segunda letra do sobrenome. Depois, exiba o nome completo concatenado 
+//com printf, como por exemplo: “Nome completo: J o S i”.
+//Dica: use variáveis do tipo char e scanf("%c", &variavel) para cada 
+//letra.
+
+#include <stdio.h>
+int main () {
+	
+	char l, e, t, r;
+	
+	printf("Inssira a letra incial do nome: ");
+	scanf(" %c", &l);
+	printf("\nInssira a segunda letra do nome: ");
+	scanf(" %c", &e);
+	
+	printf("\nInssira a letra incial do sobrenome: ");
+	scanf(" %c", &t);
+	printf("\nInssira a segunda letra do sobrenome:");
+	scanf(" %c", &r);
+	
+	printf("\nO nome: %c %c  %c %c ", l, e, t, r);
+	
+	return 0;
+}
+
+ 
+//10- Para treinar a entrada de dados simples, o aluno deve 
+//capturar o endereço do CETENS letra por letra.
+//. Crie um programa que solicite ao usuário as seguintes 
+//letras, uma por uma:
+//. Primeira letra da rua
+//. Primeira letra do bairro
+//. Primeira letra da cidade
+//. Primeira letra do estado
+//. Dígitos do CEP (um por um, como caracteres)
+//Depois, exiba o endereço completo com printf, como por 
+//exemplo: “Endereço: R: [r], B: [b], C: [c], UF: [e], 
+//CEP: [d1][d2][d3][d4][d5][d6][d7][d8]”
+//Dica: use 4 variáveis char para as iniciais e 
+//8 variáveis char para os dígitos do CEP.
+
+#include <stdio.h>
+int main (){
+char r, b, c, u;
+char d1, d2, d3, d4, d5, d6, d7, d8;
+
+
+printf("Rua?: \n");
+scanf(" %c",&r);
+printf("Bairro?: \n");
+scanf(" %c",&b);
+printf("Cidade?: \n");
+scanf(" %c",&c);
+printf("Estado?: \n");
+scanf(" %c",&u);
+
+printf("ceep?: \n");
+scanf(" %c",&d1);
+printf("Continue digitando o ceep: \n");
+scanf(" %c",&d2);
+printf("Continue digitando o ceep: \n");
+scanf(" %c",&d3);
+printf("Continue digitando o ceep: \n");
+scanf(" %c",&d4);
+printf("Continue digitando o ceep: \n");
+scanf(" %c",&d5);
+printf("Continue digitando o ceep: \n");
+scanf(" %c",&d6);
+printf("Continue digitando o ceep: \n");
+scanf(" %c",&d7);
+printf("Continue digitando o ceep: \n");
+scanf(" %c",&d8);
+
+printf("Endereco: R: %c, B: %c, C: %c, E:%c , Ceep:  %c %c %c %c %c %c %c %c", r, b, c, u, d1, d2, d3, d4, d5, d6, d7, d8);
+
+return 0;
+}
+
+
+//Questão 11 – Cadastro simples de cliente
+// Ao abrir um novo cadastro, é necessário armazenar o nome e a
+// idade do cliente.
+
+#include <stdio.h>
+int main (){
+	char n;
+	int i;
+	
+	printf("Nome cliente: \n");
+	scanf("%c",&n);
+	printf("Idade: \n");
+	scanf("%d",&i);
+	
+	printf("Nome: %c, Idade: %d ", n, i);
+
+	
+	return 0;
+
+}
+
+
+//Questão 12 – Calculando salário mensal
+//12- Uma empresa deseja calcular o salário mensal de um funcionário com base nas 
+//horas trabalhadas.
+//Leia o valor da hora e a quantidade de horas trabalhadas. Exiba o salário total.
+
+#include <stdio.h>
+int main (){
+	int qtdhoras_Trab;
+	float valor_horas, salario;
+	
+	printf("Quantas horas O empregado trabalha: \n");
+	scanf("%d", &qtdhoras_Trab);
+	printf("Quanto ele recebe pela hora do trabalho: \n");
+	scanf("%f", &valor_horas);
+	
+	salario = valor_horas * (qtdhoras_Trab * 30);
+	
+	printf("Salario?: %.2f \n", salario);
+	
+	return 0; 
+}
+
+
+ //Questão 13 – Conversão de moedas
+//Um turista precisa converter reais em dólares.
+//Leia o valor em reais e a cotação do dólar. Exiba o valor convertido.
+#include <stdio.h>
+int main (){
+	float r, d;
+	
+	printf("Valor em reais: ");
+	scanf(" %f",&r);
+	
+	d = r / 5.23;
+	
+	printf("Valor em dolar: %.2f ", d);
+	
+	return 0;
+}
+
+
+ //Questão 14 – Calculando o IMC
+//Uma clínica deseja calcular o Índice de Massa Corporal de seus pacientes.
+//Leia o peso e a altura de uma pessoa 
+//e calcule o IMC: IMC = peso / (altura * altura).
+
+#include <stdio.h>
+int main (){
+	float peso, altu, imc;
+	
+	printf("Peso: ");
+	scanf("%f",&peso);
+	printf("Altura: ");
+	scanf("%f",&altu);
+	
+	imc = peso / (altu * altu);
+	
+	printf("O IMC vale: %.2f",imc);
+	
+	return 0;
+}
+
+
+: //Questão 15 – Orçamento de pintura
+//Uma empresa de pintura calcula o custo com base na área e no preço por 
+//metro quadrado.
+//Leia a largura e altura da parede e o preço por metro quadrado. 
+//Exiba o valor total.
+
+#include <stdio.h>
+int main()
+{
+float base, alt, prec;
+
+printf("Base da parede: ");
+scanf("%f",&base);
+printf("Altura da parede: ");
+scanf("%f",&alt);
+
+prec = base * alt;
+
+printf ("\nO preco final: %.2f", prec);	
+	return 0;
+}
+
+
+//Questão 16 – Custo de viagem
+//Um motorista quer saber quanto vai gastar em combustível para 
+//uma viagem. Leia a distância, o consumo médio do carro e o 
+//preço do combustível. Calcule o custo total.
+
+#include <stdio.h>
+int main()
+{
+float dist, cons;
+printf("Ditancia: ");
+scanf("%f",&dist);
+
+cons = dist * 6.10;
+printf("Consumo em litro: %.2f ", cons);
+
+	return 0;
+}
+
+//Questão 17 – Calculando desconto
+//Uma loja aplica desconto em produtos durante uma promoção.
+//Leia o preço original e o percentual de desconto. 
+//Exiba o preço com desconto.
+
+#include <stdio.h>
+int main()
+{
+float des, preco;
+printf("Preco: ");
+scanf("%f",&preco);
+
+des = preco - 0.5;
+printf("O desconto de aplicado foi o de 5%: %.2f ", des);
+
+	return 0;
+}
+
+//Questão 18 – Nota fiscal simples
+//Um sistema de vendas precisa calcular o total de uma compra.
+//Leia o preço unitário e a quantidade de produtos. Exiba o 
+//valor total da compra.
+
+#include <stdio.h>
+int main()
+{
+float preco, compra;
+int qtd;
+printf("Preco: ");
+scanf("%f",&preco);
+printf("Quantidade: ");
+scanf("%d",&qtd);
+
+compra = preco * qtd;
+printf("\nA compra foi no valor de: %.2f ", compra);
+
+	return 0;,
+}
+
+
+ //Questão 19 – Conversão de temperatura
+//Meteorologistas precisam converter temperaturas entre escalas.
+//Leia uma temperatura em Celsius e converta para Fahrenheit: 
+//F = C * 1.8 + 32.
+
+#include <stdio.h>
+int main()
+{
+float c, f;
+
+printf("Temperatira em Celsius: ");
+scanf("%f",&c);
+
+f = (c * 1.8) + 32;
+printf("\nA Temoeratura em Fahrenheit é de: %.2f ", f);
+
+	return 0;
+}
+
+//Questão 20 – Calculando média aritmética
+//Um professor precisa calcular a média de três notas.
+//Leia três notas e exiba a média aritmética..
+
+#include <stdio.h>
+int main()
+{
+float n1, n2, n3, m;
+
+printf("Nota 1: ");
+scanf("%f",&n1);
+printf("Nota 2: ");
+scanf("%f",&n2);
+printf("Nota 3: ");
+scanf("%f",&n3);
+
+m = (n1 + n2 + n3)/3;
+printf("\nA Media  foi de: %.2f ", m);
+
+	return 0;
+}
+
+//Questão 21 – Calculando idade futura
+//Uma pessoa quer saber quantos anos terá em determinado ano.
+//Leia o ano de nascimento e o ano futuro. Exiba a idade que terá.
+
+#include <stdio.h>
+int main()
+{
+int i, a, ia;
+
+printf("Idade?: ");
+scanf("%d",&i);
+printf("Quantos anos no futuro?: ");
+scanf("%d",&a);
+
+
+ia = i + a;
+printf("\nDaqui ao final do curso: %d, você estara com %d ", a, ia);
+
+	return 0;
+}
+
+ //Questão 22 – Conversão de tempo
+//Um cronômetro precisa converter minutos em segundos.
+//Leia um valor em minutos e exiba o equivalente em segundos.
+
+#include <stdio.h>
+int main()
+{
+float m, s;
+
+printf(" Quantos minutos? voce quer converter em segundos: ");
+scanf("%f",&m);
+
+s = m * 60;
+printf("\nConverssão: %.2f segundos", s);
+
+	return 0;
+}
+
+ //Questão 23 – Cálculo de perímetro
+//Um engenheiro precisa calcular o perímetro de um terreno 
+//retangular.
+//Leia a largura e o comprimento. Exiba o 
+//perímetro: P = 2 * (largura + comprimento).
+
+#include <stdio.h>
+int main()
+{
+float perimetro, lado, comprimento;
+
+printf(" Largura: ");
+scanf("%f",&lado);
+printf(" Comprimento: ");
+scanf("%f",&comprimento);
+
+perimetro = 2 * (lado + comprimento);
+printf("\nO perimetro %.2f centimetros", perimetro);
+
+	return 0;
+}
+
+//Questão 24 – Calculando potência elétrica
+//Um técnico quer calcular a potência de um aparelho elétrico.
+//Leia a tensão e a corrente. Exiba a potência: P = V * I.
+
+#include <stdio.h>
+int main()
+{
+float tensao, potencia, corrente;
+
+printf("tensao: ");
+scanf("%f",&tensao);
+printf(" corrente: ");
+scanf("%f",&corrente);
+
+potencia = corrente * tensao;
+printf("\nA potencia é de %.2f WHAT", potencia);
+
+	return 0;
+}
+
+
+
+//Questão 25 – Conversão de velocidade
+//Um piloto deseja converter km/h para m/s.
+//Leia a velocidade em km/h e 
+//converta para m/s: m/s = km/h ÷ 3.6.
+
+#include <stdio.h>
+int main()
+{
+float velocidade, converter;
+
+printf("velocidade em kl/h em conversao para m/s : ");
+scanf("%f",&velocidade);
+
+
+converter = velocidade * 1000;
+printf("\nA velocidade é de %.3f m/s", velocidade);
+
+	return 0;
+}
+
+
+//Questão 26 – Cálculo de comissão
+Um vendedor recebe comissão sobre suas vendas.
+//Leia o valor vendido e a porcentagem de comissão. Exiba o valor da
+//comissão.
+.
+
+#include <stdio.h>
+int main(){
+	float venda, comissao, valor_Final;
+	
+	printf("Valor da venda: ");
+	scanf("%f",&venda);
+	printf("Comissao: ");
+	scanf("%c",&comissao);
+	
+	valor_Final = venda * comissao;
+	
+	printf("A comissao: %f", valor_Final);
+	
+	return 0;
+}
+
+
+
+
+//Questão 27 – Calculando área de triângulo
+//Um arquiteto precisa calcular a área de um triângulo.
+//Leia a base e a altura. Exiba a área: A = (base * altura) / 2.
+
+//Questão 27 – Calculando área de triângulo
+//Um arquiteto precisa calcular a área de um triângulo.
+//Leia a base e a altura. Exiba a área: A = (base * altura) / 2.
+
+# include <stdio.h>
+int main () {
+
+float a,h, b;
+
+
+printf("Altura:" );
+scanf("%f",&h);
+printf("Base: ");
+scanf("%f",&b);
+
+a = (b * h) / 2;
+
+printf("A area: %.2f ",a);
+
+return 0;
+
+}
+
+
+
+
+
+//Questão 28 – Conversão de litros para mililitros
+//Um químico precisa converter volumes para mililitros.
+//Leia um valor em litros e exiba o equivalente em mililitros.
+
+
+# include <stdio.h>
+int main () {
+
+float l, m;
+
+
+printf("Quantos litros voce quer conveter em melimentros? : ");
+scanf("%f",&l);
+
+m = l * 1000;
+
+printf("melimentros: %f", m);
+
+return 0;
+
+}
+
+
+
+//Questão 29 – Calculando valor com acréscimo
+//Um produto sofre acréscimo de preço por taxa de serviço.
+//Leia o valor original e a taxa de acréscimo. Exiba o valor final.
+
+# include <stdio.h>
+int main () {
+
+float preco, taxa, acrecimo;
+
+
+printf("Preco: " );
+scanf("%f",&preco);
+printf("Taixa: ");
+scanf("%f",&taxa);
+
+acrecimo  = preco + taxa;;
+
+printf("O valor com acrecimo e de: %.2f" , acrecimo);
+
+return 0;
+
+}
+
+
+
+//Questão 30 – Cadastro de produto com preço fixo
+//Um sistema precisa armazenar o nome de um produto e seu preço fixo.
+//Declare uma constante para o preço é uma variável para o nome (letra
+//inicial). Exiba ambos.
+
+# include <stdio.h>
+int main () {
+
+float preco;
+char item;;
+
+
+printf(“Item: “);
+scanf(“%f”,&iem);
+printf(“Preco: “);
+scanf(“%f”,&preco);
+
+
+printf(“O valor com acrecimo e de:  “,item, preco);
+
+return 0;
+
 }
